@@ -1,0 +1,2 @@
+node_modules/
+# prevent nodes modules folders dependancies from getting added to the repository
