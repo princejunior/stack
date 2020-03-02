@@ -70,18 +70,20 @@ router.post(
         config.get('jwtSecret'),
         { expiresIn: 360000 },
         (err, token) => {
-          if (err) throw err;
-          res.json({ token });
+          if (err) {
+            throw err;
+          } else {
+            res.json({ token });
+          }
         }
       );
-
-      res.send('User registered');
+      // res.send('User registered');
     } catch (err) {
       console.log(err.message);
       res.status(500).send('Server Error');
     }
 
-    res.send('User route');
+    // res.send('User route');
   }
 );
 
